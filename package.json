@@ -4,7 +4,8 @@
   "description": "Node server developed to handle various request from the user and to provide necessary response to the user.  ",
   "main": "controller.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node controller.js"
   },
   "keywords": [
     "Quiz",
