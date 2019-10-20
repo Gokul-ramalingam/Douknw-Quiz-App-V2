@@ -1,33 +1,55 @@
-
+*{
+  margin: 0%;
+  padding: 0%;
+}
 body{
     background-color:#4767CF;
 }
-.flex-container{
-    display: flex;
-  align-items: center;
-  flex-direction: column;
-    background-color:#4767CF;
-   
+.content{
+  height: 100vh;
   }
-/* image */
-#image{
-    /* align-items: center; */
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-    margin: 8em 0 0 0 ;
-    /* margin-left: 28em; */
+.imageContainer{
+  background-color: #ffffff;
+  padding: 0%;
 }
-/* Start button */
-#start{
-    position: relative;
-    /* align-items: center; */
-    border-radius: 40px ;
-    border-width: 5px;
-    border-color: white;
-    color:white;
-    /* margin-left: 28em; */
-    margin-top: 12em;
-    width: 7em;
-    height: 3em;
+
+.image ,.logo{
+  object-fit: contain;
+  padding: 0% 0% 0% 2%;
+}
+
+/* .form{
+  margin-top: 25%;
+} */
+
+/* .form-group{
+  margin: 2% 0% 1% 20%;
+}
+
+.signupButton{
+  margin: 2% 0% 1% 70%;
+} */
+
+.signupTitle{
+text-align: center;
+margin: 5% 0% 0% 0%;
+color: #ffffff;
+}
+.toggleButton{
+  text-align: center;
+  margin: 3% 0% 0% 0%;
+  font-size: 1.3em;
+}
+
+.signupToggleButton,.signinToggleButton{
+  color: #ffffff;
+  cursor: pointer;
+}
+.signupToggleButton{
+  padding: 0% 0% 0.5% 0%;
+  border-bottom: 5px solid #ffffff;
+}
+
+.form{
+  margin: 5% 0% 0% 0%;
 }
