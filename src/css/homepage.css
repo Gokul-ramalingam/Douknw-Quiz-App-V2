@@ -64,6 +64,13 @@ input{
   padding: 2% 7% 2% 7%;
 }
 
+.spinupButton,.spininButton{
+  background-color: #91909F;
+  color: #ffffff;
+  margin:8% 0% 0% 0%;
+  padding: 2% 10% 2% 10%;
+}
+
 .signupButton:hover{
   background-color: #EDECFC;
   color: #000000;
@@ -78,7 +85,7 @@ input{
   color: #E71C23;
 } */
 
-.passwordError{
+.passwordError,.usernameError,.signinError{
   color: #E71C23;
 }
 

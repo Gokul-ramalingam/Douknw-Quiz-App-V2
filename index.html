@@ -10,7 +10,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <link rel="stylesheet" href="src/css/homepage.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" 
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/homepage.css">
     <title>Quiz Application</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
@@ -35,7 +38,7 @@
                           <!-- <label for="username">Username</label> -->
                           <input type="text" class="form-control" id="username" name="username" 
                           placeholder="Enter Your username" required>
-                          <!-- <span class="usernameError">Please enter your username</span> -->
+                          <span class="usernameError">Username already exists</span>
                       </div>
                       <div class="form-group">
                           <!-- <label for="email">Email address</label> -->
@@ -55,6 +58,7 @@
                       </div>
                       <div class="col-12 col-md-12 text-center buttonContainer">
                           <button type="button" class="btn signupButton" id="signup">signup</button>
+                          <button type="button" class="btn spinupButton" id="spinup"><i class="fa fa-spinner fa-spin  load"></i></button>
                       </div>
                   </form>   
 
@@ -75,10 +79,11 @@
                           <!-- <label for="password">Password</label> -->
                           <input type="password" class="form-control" id="signinPassword" name="password"
                           placeholder="Enter Your password"  required>
-                          <!-- <span class="signinpasswordError">Check your password and try again</span> -->
+                          <span class="signinError">Invalid user credentials the username or password you entered is incorrect</span>
                       </div>
                       <div class="col-12 col-md-12 text-center buttonContainer">
                           <button type="button" class="btn signinButton" id="signin">signin</button>
+                          <button type="button" class="btn spininButton" id="spinin"><i class="fa fa-spinner fa-spin  load"></i></button>
                       </div>
                   </form>   
 
