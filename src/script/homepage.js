@@ -64,6 +64,11 @@ $("#password").keyup((e)=>{
     (e.target.value.match(/[a-z]+/)&&e.target.value.match(/[A-Z]+/))||
     (e.target.value.match(/[a-z]+/)&&e.target.value.match(/\W|_/g))||(e.target.value.match(/[A-Z]+/)&&e.target.value.match(/\W|_/g)))?
     $('.bar').css('background-color','yellow')&&$('.bar').css('width','60%'):null;
+    e.target.value.length >= 8&&(e.target.value.match("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).+$")||
+    e.target.value.match("^(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*\\d).+$")||
+    e.target.value.match("^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*\\d).+$")||
+    e.target.value.match("^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).+$"))?
+    $('.bar').css('background-color','yellow')&&$('.bar').css('width','80%'):null;
 })
 
 // e.target.value.match(/[0-9]+/)?e.target.value.match(/[a-z]+/)?
