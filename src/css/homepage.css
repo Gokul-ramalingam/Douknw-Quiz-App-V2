@@ -50,6 +50,7 @@ color: #ffffff;
 
 .form-group{
   margin:7% 0% 0% 0%;
+  text-align: center;
 } 
 
 input{
@@ -72,3 +73,17 @@ input{
   background-color: #EDECFC;
   color: #000000;
 }
+
+.usernameError,.emailError,.passwordError{
+  color: #E71C23;
+}
+
+.progress{
+  margin:2% 0% 0% 0%;
+  height: 7px;
+}
+
+/* .bar{
+  width: 75%;
+  background-color: yellow;
+} */
