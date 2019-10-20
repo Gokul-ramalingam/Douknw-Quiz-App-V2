@@ -105,7 +105,11 @@ router.post('/login',(req,res)=>{
 
                                     )
                                 }
+                                else{
+                                    res.status(401).json({failed:'Invalid user credentials'});
+                                }
                             })
+                            .catch(err => console.log("error generating token "+err));
              })
 })
 
