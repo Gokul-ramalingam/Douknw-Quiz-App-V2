@@ -13,11 +13,11 @@ const User = require('../../models/User');
 //@description       This route is for user registration
 //@access               PUBLIC
 router.post('/register',(req,res) => {
-User.findOne({email:req.body.email})
+User.findOne({username:req.body.username})
          .then(user => {
              if(user){
                  return res.status(400).json({
-                     exist:'User with the provided Email Id already exists'});
+                     exist:'User with the same username already exists'});
                  }
             else
             {
@@ -35,7 +35,29 @@ User.findOne({email:req.body.email})
                            throw err;
                         newUser.password = hash;
                         newUser.save()
-                                        .then(user => res.json(user))
+                                        .then(user => {
+                                            if(user)
+                                            {
+                                                const payload = {
+                                                    id : user.id,
+                                                    username : user.username,
+                                                    email: user.email
+                                                }
+                                                jsonwt.sign(
+                                                    payload,
+                                                    key,{
+                                                        expiresIn:10800
+                                                    },(err,token) => {
+                                                        if(err) throw err;
+                                                        res.json({
+                                                            success : true,
+                                                            token : "Bearer "+ token
+                                                        })
+                                                    }
+            
+                                                )
+                                            }
+                                        })
                                         .catch(err => console.log("Error occure while storing user after hashing password "+err));
                     })
                 })
@@ -51,13 +73,13 @@ User.findOne({email:req.body.email})
 // @desc           This route is for user login
 // @access       PUBLIC
 router.post('/login',(req,res)=>{
-    const email         = req.body.email;
+    const username         = req.body.username;
     const password = req.body.password;
-    User.findOne({email})
+    User.findOne({username})
              .then(user => {
                  if(!user)
                     return res.status(404).send({
-                        "Error" : "User with the provided email does not exist"
+                        "Error" : "User already with the same name already exists"
                     });
                 
                 bcrypt.compare(password,user.password)
