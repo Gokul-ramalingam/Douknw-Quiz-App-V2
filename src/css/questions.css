@@ -1,0 +1,234 @@
+*{
+    margin:0;
+    padding:0;
+}
+  #time{
+      float:inline-end;
+      margin: 0 0 0 8em;
+      font-weight: bold;
+      font-size: 3vw;
+  }
+  #section-number{
+      float: inline-start;
+      font-weight: bold;
+      font-size: 40px;
+  }
+  #num,#end-num{
+      margin-top: 2px;
+      font-weight: bold;
+      font-size: 2vw;
+  } 
+  #number{
+      margin-top: 2px;
+
+  }
+  .fa {
+    cursor: pointer;
+    color:rgba(34, 90, 243, 0.801);
+  }
+  #img-backward{
+      margin: 40px 0 0 80px;
+  }
+  #img-forward{
+    margin: 40px 0 0 80px;
+}
+ 
+   
+  #question{
+      flex-flow: row;
+      margin-top: 1%;
+      font-size: 2.5vw;
+  }
+ 
+  #option1{
+      width: 20rem;
+      height: 7vh;
+      border:2px solid #2294F3;
+      border-radius: 15px;
+      background-color:#CFD8DC;
+      margin-top: 70px;
+      text-align: center;
+      cursor: pointer;
+  }
+  #option2,#option3,#option4{
+    width: 20rem;
+    height: 7vh;
+    border:2px solid #2294F3;
+    border-radius: 15px;
+    background-color:#CFD8DC;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#sectionButton{
+    width: 8rem;
+    height: 8vh;
+    border-radius: 5px;
+    margin:0 0 1.5% 2%;
+    cursor: pointer;
+}
+#submitButton{
+    width: 8rem;
+    height: 8vh;
+    border-radius: 5px;
+    margin:0 0 1.5% 32%;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1125px) and (min-width:961px) {
+    #submitButton{
+        margin:0 0 1.5% 20%;
+    }
+    #time{
+        margin: 0 0 0 7em;
+    }
+}
+@media only screen and (max-width: 960px){
+    #submitButton{
+        margin:0 0 1.5% 20%;
+    }
+    #time{
+        margin: 0 0 0 6em;
+    }
+}
+@media only screen and (max-width: 960px)and (min-width:780px) {
+    #submitButton{
+        margin:0 0 1.5% 15%;
+        width: 8rem;
+        height: 8vh;
+    }
+    #time{
+        margin: 0 0 0 4em;
+    }
+    #section-number{
+        float: inline-start;
+        font-weight: bold;
+        font-size: 35px;
+    }
+}
+@media  screen and (max-width: 793px) and (min-width:620px){
+    #submitButton{
+        width: 7rem;
+        height: 7vh;
+        margin: 5px 0 0 100px;
+    }
+    #sectionButton{
+        width: 7rem;
+        height: 7vh;
+        margin: 5px 0 0 0;
+    }
+    #time{
+        margin: 0 0 0 3em;
+    }
+    #section-number{
+        float: inline-start;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    #question{
+        flex-flow: row;
+        margin-top: 1%;
+        font-size: 20px;;
+    }
+}
+@media  screen and (max-width: 633px) and (min-width:460px){
+    #submitButton{
+        width: 7rem;
+        height: 7vh;
+        margin: 5px 0 0 28px;
+    }
+    #sectionButton{
+        width: 7rem;
+        height: 7vh;
+        margin: 5px 0 0 0;
+    }
+    #time{
+        margin: 0 0 0 2em;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    #section-number{
+        float: inline-start;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    #num,#end-num{
+        margin-top: 2px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    #question{
+        flex-flow: row;
+        margin-top: 1%;
+        font-size: 15px;;
+    }
+    
+}
+@media  screen and (max-width: 473px) and (min-width:350px){
+    #submitButton{
+        width: 6.8rem;
+        height: 6.8vh;
+        margin: 5px 0 0 20px;
+    }
+    #sectionButton{
+        width: 6.8rem;
+        height: 6.8vh;;
+        margin: 5px 0 0 0;
+    }
+    #time{
+        margin: 0 0 0 2em;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    #section-number{
+        float: inline-start;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    #num,#end-num{
+        margin-top: 2px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    #question{
+        flex-flow: row;
+        margin-top: 1%;
+        font-size: 15px;;
+    }
+}
+@media  screen and (max-width: 394px) and (min-width:240px){
+    #submitButton{
+        width: 5rem;
+        height: 6.8vh;
+        margin: 5px 0 0 10px;
+    }
+    #sectionButton{
+        width: 6rem;
+        height: 6.8vh;;
+        margin: 5px 0 0 0;
+    }
+    #time{
+        margin: 0 0 0 5px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    #section-number{
+        float: inline-start;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    #num,#end-num{
+        margin-top: 2px;
+        font-weight: bold;
+        font-size: 10px;
+    }
+    #question{
+        flex-flow: row;
+        margin-top: 1%;
+        font-size: 12px;;
+    }
+}
+
+

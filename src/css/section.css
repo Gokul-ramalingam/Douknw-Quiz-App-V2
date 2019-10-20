@@ -1,0 +1,146 @@
+#container{
+    background-color: #ffffff;
+    height: 50vh;
+    align-items: center;
+    text-align: center;
+}
+
+
+#htm{
+    height: 25vh;
+    width: 20%;
+    margin-top: 5%;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+    border: 2px solid #2294F3;
+    margin-left: 15%; 
+    text-align: center;
+    padding: 2% 0% 0% 0%;
+    cursor: pointer;
+}
+
+#cs{
+    height: 25vh;
+    width: 20%;
+    margin-top: 5%;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+    border: 2px solid #2294F3;
+    margin-left: 5%;
+    text-align: center;
+    padding: 2% 0% 0% 0%;
+    cursor: pointer;
+}
+
+#cs,#jst{
+    height: 25vh;
+    width: 20%;
+    margin-top: 5%;
+    border-radius: 10px;
+    border: 2px solid #2294F3;
+    background-color: #F0F0F0;
+    margin-left: 5%;
+    text-align: center;
+    padding: 2% 0% 0% 0%;
+    cursor: pointer;
+}
+
+#sectionImage{
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+}
+
+ #sectionTitle{
+    font-size: 1.5vw;
+}
+
+#language{
+    font-size: 3vw;
+    padding:  5%;
+} 
+
+.icon1{
+    color: orangered;
+}
+.icon2{
+    color: #2294F3;
+}
+
+.icon3{
+    color: #EEC213;
+}
+/*ipad*/
+@media screen and (max-width: 1024px){
+    #sectionsList
+    {
+        display:inline;
+    }
+    #htm,#cs,#jst{
+        height: 10vh;
+        width: 40%;
+        margin-top: 5%;
+        background-color: #F0F0F0;
+        /* border: 2px solid #00E676; */
+        margin-left: 30%; 
+        text-align: center;
+        cursor: pointer;
+    }
+       
+}
+
+
+@media screen and (max-width: 768px){
+    #sectionsList
+    {
+        display:inline;
+    }
+    #htm,#cs,#jst{
+        height: 10vh;
+        width: 40%;
+        margin-top: 5%;
+        background-color: #F0F0F0;
+        /* border: 2px solid #00E676; */
+        margin-left: 30%; 
+        text-align: center;
+        cursor: pointer;
+    }
+         
+}
+
+@media only screen and (max-width: 768px) and (orientation:landscape) {
+    #sectionsList
+    {
+        display:inline;
+    }
+    #htm,#cs,#jst{
+        height: 20vh;
+        width: 35%;
+        margin-top: 5%;
+        background-color: #F0F0F0;
+        /* border: 2px solid #00E676; */
+        margin-left: 30%; 
+        text-align: center;
+        cursor: pointer;
+    }
+       
+    }
+
+    
+@media only screen and (max-width: 1024px) and (orientation:landscape) {
+    #sectionsList
+    {
+        display:inline;
+    }
+    #htm,#cs,#jst{
+        height: 20vh;
+        width: 40%;
+        margin-top: 5%;
+        background-color: #F0F0F0;
+        /* border: 2px solid #00E676; */
+        margin-left: 30%; 
+        text-align: center;
+        cursor: pointer;
+    }
+       
+    }
