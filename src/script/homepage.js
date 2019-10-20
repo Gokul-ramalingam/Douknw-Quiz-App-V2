@@ -21,6 +21,8 @@ let toggleSignin = () => {
     $('.signinToggleButton').css('padding','5px solid #91909F');
 }
 
+let passwordStrength = false;
+
 $("#signup").click(() => {
 
     let dataString = {}
@@ -30,6 +32,7 @@ $("#signup").click(() => {
     dataString.username === ''?$('#username').css('border','1px solid red')&&$('.usernameError').show():null;
     dataString.email === ''?$('#email').css('border','1px solid red')&&$('.emailError').show():null;
     dataString.password === ''?$('#password').css('border','1px solid red')&&$('.passwordError').show():null;
+    passwordStrength === false?$('#password').css('border','1px solid red')&&$('.passwordError').show():null;
 })
 
 $("#username").click(() => {
@@ -69,11 +72,16 @@ $("#password").keyup((e)=>{
     e.target.value.match("^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*\\d).+$")||
     e.target.value.match("^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).+$"))?
     $('.bar').css('background-color','yellow')&&$('.bar').css('width','80%'):null;
+    // e.target.value.length >= 8&&e.target.value.match("^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*\\d).+$")?
+    // $('.bar').css('background-color','green')&&$('.bar').css('width','100%'):null;
+    if(e.target.value.length >= 8&&e.target.value.match("^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*\\d).+$"))
+    {
+        $('.bar').css('background-color','green')&&$('.bar').css('width','100%');
+       passwordStrength = true;
+    }
+    else
+    passwordStrength = false;
 })
 
-// e.target.value.match(/[0-9]+/)?e.target.value.match(/[a-z]+/)?
-//     e.target.value.match(/[A-Z]+/)? e.target.value.match(/\W|_/g)?
-//     $('.bar').css('background-color','green')&&$('.bar').css('width','100%'):
-//     $('.bar').css('background-color','yellow')&&$('.bar').css('width','80%'):
-//     $('.bar').css('background-color','yellow')&&$('.bar').css('width','60%'):
+
   
