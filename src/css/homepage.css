@@ -74,7 +74,11 @@ input{
   color: #000000;
 }
 
-.usernameError,.emailError,.passwordError,.signinusernameError,.signinpasswordError{
+/* .usernameError,.emailError,.passwordError,.signinusernameError,.signinpasswordError{
+  color: #E71C23;
+} */
+
+.passwordError{
   color: #E71C23;
 }
 

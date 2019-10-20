@@ -1,6 +1,6 @@
 let init = () => {
     toggleSignin();
-    $('.usernameError,.emailError,.passwordError,.signinusernameError,.signinpasswordError,.progress').hide();
+    $('.usernameError,.emailError,.passwordError,.progress').hide();
 }
 
 $( init );
@@ -29,9 +29,9 @@ $("#signup").click(() => {
     dataString.username = $('#username').val();
     dataString.email = $('#email').val();
     dataString.password = $('#password').val();
-    dataString.username === ''?$('#username').css('border','1px solid red')&&$('.usernameError').show():null;
-    dataString.email === ''?$('#email').css('border','1px solid red')&&$('.emailError').show():null;
-    dataString.password === ''?$('#password').css('border','1px solid red')&&$('.passwordError').show():null;
+    dataString.username === ''?$('#username').css('border','1px solid red'):null;
+    dataString.email === ''?$('#email').css('border','1px solid red'):null;
+    dataString.password === ''?$('#password').css('border','1px solid red'):null;
     passwordStrength === false?$('#password').css('border','1px solid red')&&$('.passwordError').show():null;
 })
 
@@ -40,8 +40,8 @@ $("#signin").click(() => {
     let dataString = {}
     dataString.username = $('#signinUsername').val();
     dataString.password = $('#signinPassword').val();
-    dataString.username === ''?$('#signinUsername').css('border','1px solid red')&&$('.signinusernameError').show():null;
-    dataString.password === ''?$('#signinPassword').css('border','1px solid red')&&$('.signinpasswordError').show():null;
+    dataString.username === ''?$('#signinUsername').css('border','1px solid red'):null;
+    dataString.password === ''?$('#signinPassword').css('border','1px solid red'):null;
 })
 
 
