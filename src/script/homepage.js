@@ -1,6 +1,6 @@
 let init = () => {
     toggleSignin();
-    $('.usernameError,.emailError,.passwordError').hide();
+    $('.usernameError,.emailError,.passwordError,.signinusernameError,.signinpasswordError,.progress').hide();
 }
 
 $( init );
@@ -35,6 +35,18 @@ $("#signup").click(() => {
     passwordStrength === false?$('#password').css('border','1px solid red')&&$('.passwordError').show():null;
 })
 
+
+$("#signin").click(() => {
+    let dataString = {}
+    dataString.username = $('#signinUsername').val();
+    dataString.password = $('#signinPassword').val();
+    dataString.username === ''?$('#signinUsername').css('border','1px solid red')&&$('.signinusernameError').show():null;
+    dataString.password === ''?$('#signinPassword').css('border','1px solid red')&&$('.signinpasswordError').show():null;
+})
+
+
+
+
 $("#username").click(() => {
     $('#username').css('border','none')&&$('.usernameError').hide();
 })
@@ -44,6 +56,7 @@ $("#email").click(() => {
 })
 
 $("#password").click(() => {
+    $('.progress').show();
     $('#password').css('border','none')&&$('.passwordError').hide();
 })
 
