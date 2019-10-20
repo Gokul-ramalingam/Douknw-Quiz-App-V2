@@ -4,7 +4,7 @@ let jsAr = [];
 
 //Ajax request is made to receive all the questions from mongodb database using node api.
 $(document).ready(function(){
-   localStorage.setItem('token','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYWMzYzU4Y2JlNDU5MGY5ODI4YzFhNCIsInVzZXJuYW1lIjoiR29rdWwiLCJlbWFpbCI6Imdva3VscmFtYWxpbmdhbUBnbWFpbC5jb20iLCJpYXQiOjE1NzE1Njg3NDIsImV4cCI6MTU3MTU3OTU0Mn0.-_QaU-7jsQZIzgHiOOXyjwSECQSgjeU-7UAecFOV49I');
+   
     $.ajax({
         url:'http://localhost:9000/api/questions',
         type: 'GET',
