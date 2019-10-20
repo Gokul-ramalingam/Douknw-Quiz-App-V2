@@ -25,11 +25,11 @@
         <div class="col-12 col-md-7 formContainer">
             <div class="container h-100">
                 <div class="row h-100 justify-content-center align-items-center">
-                  <form class="col-6">
+                  <form class="col-6" id="signupForm">
                       <h1 class="signupTitle"><b>Create Account</b></h1>
                       <div class="toggleButton">
                         <b class="signupToggleButton">Sign Up</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <b class="signinToggleButton" (click)='login()'>Sign In</b>
+                        <b class="signinToggleButton" onclick='signin()'>Sign In</b>
                       </div>
                       <div class="form-group">
                           <!-- <label for="username">Username</label> -->
@@ -50,6 +50,30 @@
                           <button type="button" class="btn signupButton" id="signup">signup</button>
                       </div>
                   </form>   
+
+
+                  <form class="col-6" id="signinForm">
+                      <h1 class="signupTitle"><b>Welcome Back!</b></h1>
+                      <div class="toggleButton">
+                        <b class="signupToggleButton" onclick='signup()'>Sign Up</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <b class="signinToggleButton">Sign In</b>
+                      </div>
+                      <div class="form-group">
+                          <!-- <label for="username">Username</label> -->
+                          <input type="text" class="form-control border-secondary" id="username" name="username" 
+                          placeholder="Enter Your username" required>
+                      </div>
+                      <div class="form-group">
+                          <!-- <label for="password">Password</label> -->
+                          <input type="password" class="form-control border-secondary" id="password" name="password"
+                          placeholder="Enter Your password"  required>
+                      </div>
+                      <div class="col-12 col-md-12 text-center buttonContainer">
+                          <button type="button" class="btn signinButton" id="signin">signin</button>
+                      </div>
+                  </form>   
+
+
                 </div>
               </div>
             
