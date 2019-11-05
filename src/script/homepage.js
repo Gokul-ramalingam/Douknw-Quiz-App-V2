@@ -43,7 +43,7 @@ $("#signup").click(() => {
             url: "http://localhost:9000/api/auth/register",
             success: (data) => {
                  localStorage.setItem('token',data.token.split(' ')[1]);
-                window.location.href='/src/html/section.html'
+                window.location.href='/src/html/dashboard.html'
             },
             error: () => {
                 $('#signupForm')[0].reset();
@@ -78,7 +78,7 @@ $("#signin").click(() => {
             url: "http://localhost:9000/api/auth/login",
             success: (data) => {
                 localStorage.setItem('token',data.token.split(' ')[1]);
-                window.location.href='/src/html/section.html'
+                window.location.href='/src/html/dashboard.html'
             },
             error: () => {
                 $('#signinPassword').val('');
