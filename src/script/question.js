@@ -4,7 +4,7 @@ let timer = ()=>{
    let interval = setInterval(() =>{
 
    let timer = timer2.split(':');
-   //by parsing integer, I avoid all extra string processing
+   //by parsing integer,we avoid all extra string processing
    let minutes = parseInt(timer[0], 10);
    let seconds = parseInt(timer[1], 10);
    --seconds;
@@ -140,3 +140,6 @@ let selector = ((option)=>{
        location.href = 'section.html';
    })
  
+   $('.navbar-collapse ul li a').click(function(){ 
+    $('.navbar-toggle:visible').click();
+});
