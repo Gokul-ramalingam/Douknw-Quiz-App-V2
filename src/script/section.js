@@ -28,8 +28,12 @@ $(document).ready(function(){
                 return dt[Object.getOwnPropertyNames(dt)[1]]["type"] === 'js';
              })
              randomPicker(jsQuestions,jsAr);//Filtered question of particular type and a empty array for that type is passed as parameter
+        },
+        error : () => {
+           window.location= 'http://localhost:5501/index.html'
         }
-    })
+    }
+    )
  
   });
 //If the localstorage has the particular item then opacity of that section is reduced to indicate it is not clickable.
