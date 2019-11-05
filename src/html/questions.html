@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
      <link rel="stylesheet" href="../css/questions.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -15,26 +17,69 @@
   </head>
   <body>
       <!-- container for section1 -->
-      <div class="container-fluid">
+      <!-- <div class="container-fluid"> -->
           <!-- section and timings -->
-        <div class="section" id="section1">
+        <!-- <div class="section" id="section1">
            <span id="section-number">Section <span id="sec">1</span></span>
-           <span  type="button" class="btn btn-outline-primary btn-lg button Button" id="sectionButton">Section</span>
+           <button  type="button" class="sectionBtn" id="sectionButton">Section</button>
            <span id="time" >3:00</span>
-           <span type="button" class="btn btn-outline-primary btn-lg button Button" id="submitButton">Finish</span>
-        </div> 
+           <button type="button" class="finishBtn" id="submitButton">Finish</button>
+        </div>  -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <h1 class="navbar-brand" id="time" href="#">3:00</h1>
+          <div class="justify-content-start">
+          <span class="nav-section" href="#">Section <span id="sec">1</span></span>
+          </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+            aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" id="sectionButton" href="#"><span class="sectionBtn">Section</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="submitButton" href="#"><span class="finishBtn">Finish</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="container-fluid">
+          <div class="row content">
+            <div class="col-12 col-md-8 data">
+                <b class="question" id="num">1</b><span>/10</span>
+                <div>
+                    <h6 id="question">Web pages starts with which of the following tag?</h6>
+                </div>
+                <div class="options">
+                    <div id="option1"><span id="opt1">option</span></div>
+                    <div id="option2"><span id="opt2">option</span></div>
+                    <div id="option3"><span id="opt3">option</span></div>
+                    <div id="option4"><span id="opt4">option</span></div>
+                </div>
+                <div>
+                    <span class="backward" id="img-backward"><i class="fa fa-chevron-circle-left"></i></span>
+                    <span class="forward" id="img-forward"><i class="fa fa-chevron-circle-right"></i></span>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        
         <!-- question number and buttons for forward , backward. -->
-        <div class="question-number" id="number">
+        <!-- <div class="question-number" id="number">
             <span id="num">1</span>
             <span id="end-num">of 10</span>
            
-        </div> 
+        </div>  -->
           <!--question-->
-          <div id="question">
+          <!-- <div id="question">
              Inside which HTML element do we put the JavaScript?
-          </div>
+          </div> -->
           <!-- option part -->
-          <div class="options">
+          <!-- <div class="options">
               <div id="option1"><span id="opt1"></span></div>
               <div id="option2"><span id="opt2"></span></div>
               <div id="option3"><span id="opt3"></span></div>
@@ -42,7 +87,8 @@
           </div>
          <i class="fa fa-arrow-circle-o-left fa-3x" aria-hidden="true" id="img-backward"></i>
          <i class="fa fa-arrow-circle-o-right fa-3x" aria-hidden="true" id="img-forward"></i>
-          </div>
+           -->
+          <!-- </div> -->
      <script type="text/JavaScript" src="../script/question.js"></script>
   </body>
 </html>
