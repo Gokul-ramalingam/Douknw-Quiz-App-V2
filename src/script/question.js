@@ -1,5 +1,4 @@
 let timer = ()=>{
-    console.log("here")
    let timer2 = "3:01";
    let interval = setInterval(() =>{
 
@@ -26,7 +25,7 @@ let questions;
 
 //query return html or css or js from url 
 //Eg : douknw.com/questions?html
-let query = window.location.search.substring(1,); // ==> html
+let query = window.location.hash.substring(1,); // ==> html
 
 if(query === 'html')
 {
@@ -54,6 +53,20 @@ $('#img-forward').click(()=>{
  });
  $('#img-forward').click();
  timer();
+
+ if (window.history && window.history.pushState) {
+
+    window.history.pushState('forward', null, './#forward');
+
+    $(window).on('popstate', function() {
+        localStorage.setItem(query+"Answers",JSON.stringify(answerArray));
+        if(localStorage.hasOwnProperty('htm') && localStorage.hasOwnProperty('cs')&&localStorage.hasOwnProperty('js'))
+        location.href = 'result.html';
+        else
+        location.href = 'section.html';
+    });
+
+  }
 })
 
 
@@ -130,14 +143,6 @@ let selector = ((option)=>{
    $("#submitButton").click(()=>{
        localStorage.setItem(query+"Answers",JSON.stringify(answerArray));
        location.href = 'result.html'
-   })
-
-   $("#sectionButton").click(()=>{
-       localStorage.setItem(query+"Answers",JSON.stringify(answerArray));
-       if(localStorage.hasOwnProperty('htm') && localStorage.hasOwnProperty('cs')&&localStorage.hasOwnProperty('js'))
-       location.href = 'result.html';
-       else
-       location.href = 'section.html';
    })
  
    $('.navbar-collapse ul li a').click(function(){ 
