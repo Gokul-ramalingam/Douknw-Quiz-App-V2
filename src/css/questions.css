@@ -48,7 +48,7 @@
 text-align: center;
 }
 .backward,.forward{
-   /* font-size: 2em; */
+   font-size: 2em;
    margin: 5%;
    cursor: pointer;
 }
