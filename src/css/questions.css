@@ -4,8 +4,8 @@
 }
 .navbar{
    display: flex;
-   /* justify-content: space-between;
-   background-color: #2294F3; */
+   justify-content: space-between;
+   background-color: #2294F3;
    height: 10vh;
    align-items: center;
 }
