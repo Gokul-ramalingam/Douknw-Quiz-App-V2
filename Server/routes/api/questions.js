@@ -15,7 +15,7 @@ const User = require('../../models/User')
 //@route                   /api/questions
 //@desc                    This route is to get the questions
 //@access                 Private
-router.get('/',authorization,(req,res) => {
+router.get('/',(req,res) => {
  Question.find({})
                    .then(questions => {
                        if(!questions)
