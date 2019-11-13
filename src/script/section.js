@@ -52,7 +52,7 @@ if(localStorage.getItem("htm")==="yes")
       {
       localStorage.setItem("htm","yes");
       localStorage.setItem("htmlArray",JSON.stringify(htmlAr));
-     location.href='questions.html?html';
+     location.href='questions.html#html';
       }
    })
   
@@ -61,7 +61,7 @@ if(localStorage.getItem("htm")==="yes")
    {
      localStorage.setItem("cs","yes");
      localStorage.setItem("cssArray",JSON.stringify(cssAr));
-     location.href='questions.html?css';
+     location.href='questions.html#css';
    }
   })
   
@@ -71,7 +71,7 @@ if(localStorage.getItem("htm")==="yes")
    {
      localStorage.setItem("js","yes");
      localStorage.setItem("jsArray",JSON.stringify(jsAr));
-     location.href='questions.html?js';
+     location.href='questions.html#js';
    }
   })
 
